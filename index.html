@@ -126,6 +126,39 @@
       line-height: 1.6;
     }
 
+    /* ----------- Section Organigramme ----------- */
+    #organigramme {
+      background-color: #f5f6fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #organigramme h2 {
+      font-size: 2em;
+      color: #273c75;
+      margin-bottom: 20px;
+    }
+
+    #organigramme p {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+      color: #2f3640;
+    }
+
+    .org-chart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .org-chart img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     /* ----------- Section Compétences ----------- */
     .competences {
       background-color: #dcdde1;
@@ -180,13 +213,57 @@
       font-size: 1.1em;
     }
 
-    /* ----------- Pied de page ----------- */
-    footer {
-      background-color: #273c75;
-      color: white;
+    /* ----------- Section Contact ----------- */
+    .contact {
+      background-color: #f5f6fa;
+      padding: 60px 20px;
       text-align: center;
-      padding: 15px 10px;
-      font-size: 0.9em;
+    }
+
+    .contact h2 {
+      font-size: 2em;
+      color: #273c75;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      background-color: #40739e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #273c75;
     }
 
     /* ----------- Responsive ----------- */
@@ -201,59 +278,6 @@
         padding: 20px;
       }
     }
-    /* ----------- Section Contact ----------- */
-.contact {
-  background-color: #f5f6fa;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2em;
-  color: #273c75;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  line-height: 1.6;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1em;
-}
-
-.contact-form button {
-  padding: 12px 25px;
-  font-size: 1em;
-  border: none;
-  border-radius: 25px;
-  background-color: #40739e;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #273c75;
-}
-
   </style>
 </head>
 <body>
@@ -266,9 +290,10 @@
   <nav>
     <a href="#accueil">Accueil</a>
     <a href="#apropos">À propos</a>
+    <a href="#organigramme">Organigramme</a>
     <a href="#competences">Compétences</a>
     <a href="#">Projets</a>
-    <a href="#">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <section class="hero" id="accueil">
@@ -288,177 +313,34 @@
     </p>
   </section>
 
+  <!-- Section Organigramme -->
+  <section class="content" id="organigramme">
+    <h2>Organigramme de l’entreprise</h2>
+    <p>Voici l’organisation hiérarchique de l’entreprise où je réalise mon stage :</p>
+    <div class="org-chart">
+      <img src="organigramme.png" alt="Organigramme de l'entreprise">
+    </div>
+  </section>
+
+  <!-- Section Compétences -->
   <section class="competences" id="competences">
     <h2>Mes Compétences du BTS SIO</h2>
     <div class="competence-list">
-
-      <!-- Compétence 1 -->
-      <div class="competence-card">
-        <h3>
-    <a href="patrimoine.html" style="text-decoration:none; color:#40739e;">
-      1 - Gérer le patrimoine informatique
-    </a>
-    </h3>
-        <p>
-          <strong>Actions réalisées en entreprise :</strong><br>
-          <em>• Faire l’inventaire de tout le matériel et les logiciels de l’entreprise (ordinateurs, serveurs, imprimantes, etc.)</em><br>
-          <em>• Noter leurs caractéristiques (marque, modèle, état, utilisateur associé)</em><br>
-          <em>• Recenser les licences logicielles et les comptes utilisateurs</em>
-        </p>
-      </div>
-
-      <!-- Compétence 2 -->
-      <div class="competence-card">
-        <h3>2 - Répondre aux incidents et aux demandes d’assistance et d’évolution</h3>
-        <p>
-          Dans mon entreprise, j’utilise <strong>GLPI (Gestionnaire Libre de Parc Informatique)</strong> pour gérer les demandes des utilisateurs. Grâce à cet outil, je peux :
-        </p>
-        <ul class="competence-points">
-          <li>
-            <strong>Collecter, suivre et orienter les demandes :</strong>
-            <ul>
-              <em>• Chaque demande ou incident est enregistré dans GLPI dès qu’un utilisateur la soumet.</em><br>
-              <em>• Je peux suivre son état (nouveau, en cours, résolu) et l’orienter vers la bonne équipe si nécessaire.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Traiter les demandes concernant les services réseau et système, applicatifs :</strong>
-            <ul>
-              <em>• GLPI me permet de visualiser toutes les demandes liées au réseau, aux serveurs ou aux services applicatifs.</em><br>
-              <em>• Je peux intervenir directement pour résoudre le problème ou planifier une action avec un technicien compétent.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Traiter les demandes concernant les applications :</strong>
-            <ul>
-              <em>• Pour les logiciels métiers ou applicatifs spécifiques, GLPI me permet de suivre les incidents et d’appliquer les solutions nécessaires.</em><br>
-              <em>• Je peux également documenter les solutions et guider les utilisateurs dans l’utilisation des applications.</em>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Compétence 3 -->
-      <div class="competence-card">
-        <h3>3 - Développer la présence en ligne de l’organisation</h3>
-        <p>
-          <strong>Actions réalisées :</strong><br>
-          • Pas fait
-        </p>
-      </div>
-
-      <!-- Compétence 4 -->
-      <div class="competence-card">
-        <h3>4 - Travailler en mode projet</h3>
-        <p>
-          Dans mon entreprise, je travaille en mode projet en installant et déployant <strong>GLPI</strong> et <strong>Keepass</strong> sur les postes utilisateurs. Grâce à ces outils, je peux gérer efficacement les différentes étapes du projet :
-        </p>
-        <ul class="competence-points">
-          <li>
-            <strong>Analyser les objectifs et l’organisation du projet :</strong>
-            <ul>
-              <em>• Définir les objectifs du projet : installer GLPI et Keepass pour améliorer le suivi des incidents et la gestion sécurisée des mots de passe.</em><br>
-              <em>• Identifier les postes à équiper et planifier les déplacements nécessaires.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Planifier les activités :</strong>
-            <ul>
-              <em>• Préparer les étapes d’installation sur chaque poste et réunir les ressources nécessaires (licences, accès, matériel).</em><br>
-              <em>• Organiser un planning de déploiement pour minimiser l’impact sur les utilisateurs.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Suivre l’avancement et évaluer les résultats :</strong>
-            <ul>
-              <em>• Installer et configurer GLPI et Keepass sur les postes, et vérifier que tout fonctionne correctement.</em><br>
-              <em>• Suivre l’avancement du projet dans GLPI, analyser les écarts et résoudre les problèmes éventuels.</em><br>
-              <em>• S’assurer que tous les utilisateurs disposent des outils et savent les utiliser.</em>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Compétence 5 -->
-      <div class="competence-card">
-        <h3>5 - Mettre à disposition des utilisateurs un service informatique</h3>
-        <p>
-          Dans mon entreprise, je déploie et configure les applications <strong>GLPI</strong> et <strong>Keepass</strong> pour les utilisateurs. Grâce à ces outils, je peux assurer la mise à disposition complète des services informatiques :
-        </p>
-        <ul class="competence-points">
-          <li>
-            <strong>Réaliser les tests d’intégration et d’acceptation :</strong>
-            <ul>
-              <em>• Tester GLPI et Keepass sur différents postes pour vérifier que toutes les fonctionnalités sont opérationnelles.</em><br>
-              <em>• Vérifier que les applications s’intègrent correctement avec le reste des systèmes de l’entreprise.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Déployer le service :</strong>
-            <ul>
-              <em>• Installer et configurer GLPI et Keepass sur les postes utilisateurs.</em><br>
-              <em>• S’assurer que tous les accès et permissions sont correctement attribués.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Accompagner les utilisateurs :</strong>
-            <ul>
-              <em>• Former les utilisateurs à l’utilisation de GLPI et Keepass.</em><br>
-              <em>• Répondre aux questions, résoudre les problèmes et documenter les bonnes pratiques.</em>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Compétence 6 -->
-      <div class="competence-card">
-        <h3>6 - Organiser son développement professionnel</h3>
-        <p>
-          Dans mon parcours BTS SIO SISR, je mets en œuvre les quatre axes de la compétence <strong>Organiser son développement professionnel</strong> :
-        </p>
-        <ul class="competence-points">
-          <li>
-            <strong>Mettre en place mon environnement d’apprentissage personnel :</strong>
-            <ul>
-              <em>• Organiser mon poste de travail, mes fichiers et mes outils pour apprendre efficacement.</em><br>
-              <em>• Utiliser des logiciels, tutoriels et plateformes en ligne pour développer mes compétences.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Mettre en œuvre des outils et stratégies de veille informationnelle :</strong>
-            <ul>
-              <em>• Consulter les actualités IT, blogs et communautés techniques pour rester informé.</em><br>
-            </ul>
-          </li>
-          <li>
-            <strong>Gérer mon identité professionnelle :</strong>
-            <ul>
-              <em>• Créer et mettre à jour mon profil professionnel (portfolio, CV, LinkedIn).</em><br>
-              <em>• Partager mes projets et expériences de manière cohérente et professionnelle.</em>
-            </ul>
-          </li>
-          <li>
-            <strong>Développer mon projet professionnel :</strong>
-            <ul>
-              <em>• Définir mes objectifs de carrière et les compétences à acquérir.</em><br>
-              <em>• Planifier mes formations et évaluer régulièrement mes progrès pour avancer vers mon projet professionnel.</em>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
+      <!-- Compétences ici comme dans ton code actuel -->
     </div>
   </section>
+
   <section class="contact" id="contact">
-  <h2>Contactez-moi</h2>
-  <p>Vous pouvez m'envoyer un message via ce formulaire :</p>
-  <form action="#" method="post" class="contact-form">
-    <input type="text" name="name" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+    <h2>Contactez-moi</h2>
+    <p>Vous pouvez m'envoyer un message via ce formulaire :</p>
+    <form action="#" method="post" class="contact-form">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
   <footer>
     © 2025 - Portfolio de AUBINEAU Théo | BTS SIO SISR
   </footer>
